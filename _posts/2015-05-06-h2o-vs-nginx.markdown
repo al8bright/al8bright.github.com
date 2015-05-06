@@ -7,8 +7,6 @@ categories: Qiita
 
 # h2o와 nginx의 성능 비교
 
-- - -
-
 nginx 보다 빠르다고하는 h2o 이지만, 실제로 자신도 현지에서 벤치 마크를 취해 보았습니다. 환경은 다음과 같습니다.
 
 - EC2의 c4.8xlarge 인스턴스
