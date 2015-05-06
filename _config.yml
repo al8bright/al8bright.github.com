@@ -9,4 +9,4 @@ twitter_username: al8bright
 github_username:  al8bright
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
