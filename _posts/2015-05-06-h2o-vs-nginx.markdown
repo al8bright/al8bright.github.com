@@ -33,7 +33,7 @@ nginx 보다 빠르다고하는 h2o 이지만, 실제로 자신도 현지에서 
 서버가 반환하는 응답은 nginx에 포함 된 index.html 입니다. 크기는 612 바이트입니다.
 
 ```
-$ cat /usr/local/nginx/html/index.html 
+$ cat /usr/local/nginx/html/index
 <h1> Welcome to nginx! </ h1> 
 <p> If you see this page, the nginx web server is successfully installed and
 working. Further configuration is required. </ p>
