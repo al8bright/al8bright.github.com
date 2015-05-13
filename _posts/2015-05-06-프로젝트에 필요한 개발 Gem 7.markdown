@@ -64,7 +64,7 @@ Rails 디버깅을 매우 편하게 해주는 gem입니다. 솔직히 이것 없
 class  HomeController  <  ApplicationController 
   def  index 
     @hoge  =  'hoge' 
-    binding . 놀리려는 
+    binding.pry 
   end 
 end 
 {% endhighlight %}
