@@ -1,23 +1,54 @@
 ---
 layout: default
+comments: true
 ---
 
-<div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+	<!-- page-title start -->
+	<!-- ================ -->
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	<div class="separator-2"></div>
+	<!-- page-title end -->
+	
+	<!-- blogpost start -->
+	{% for post in paginator.posts %}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+		<article class="blogpost">
+			<div class="row grid-space-10">
+				<div class="col-md-12">
+					<header>
+						<h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+						<div class="post-info">
+							<span class="post-date">
+								<i class="icon-calendar"></i>
+								<span class="day">{{ post.date | date: "%b  %Y" }}</span>
+								<span class="month">{{ post.date | date: "%-d" }}</span>
+							</span>
+							<span class="submitted"><i class="icon-user-1"></i> by <a href="#">{{post.author}}</a></span>
+							<span class="comments"><i class="icon-chat"></i> <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread"></a></span>
+						</div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+						{% for tag in post.categories %}
+							<li><a href="/category#{{ tag[0] | slugify }}">{{ tag[0] }}</a></li>
+						{% endfor %}
+					</header>
 
-</div>
+					<div class="blogpost-content">
+						{{ post.content | strip_html | truncatewords:60}}
+					</div>
+					
+					<footer class="clearfix">
+						<div class="tags pull-left"><i class="icon-tags"></i> 
+							{% for tag in post.tags  %}  
+								<a href="/tags/{{ tag }}" title="{{ tag }}">{{ tag }}</a>          
+							{% endfor %} 
+						</div>
+						<div class="link pull-right"><i class="icon-link"></i>
+							<a href="{{ post.url }}">Read More</a>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</article>
+	{% endfor %}
+	<!-- blogpost end -->

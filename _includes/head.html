@@ -1,12 +1,54 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	
+	<meta name="author" content="al8bright">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<!-- Mobile Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!-- Web Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap core CSS -->
+	<link href="{{ '/assets/bootstrap/css/bootstrap.css' | prepend: site.baseurl }}" rel="stylesheet">
+
+	<!-- Font Awesome CSS -->
+	<link href="{{ '/assets/fonts/font-awesome/css/font-awesome.css' | prepend: site.baseurl }}" rel="stylesheet">
+
+	<!-- Fontello CSS -->
+	<link href="{{ '/assets/fonts/fontello/css/fontello.css' | prepend: site.baseurl }}" rel="stylesheet">
+
+	<!-- Plugins -->
+	<link href="{{ '/assets/plugins/magnific-popup/magnific-popup.css' | prepend: site.baseurl }}" rel="stylesheet">
+	<link href="{{ '/assets/css/animations.css' | prepend: site.baseurl }}" rel="stylesheet">
+	<link href="{{ '/assets/plugins/owlcarousel2/assets/owl.carousel.min.css' | prepend: site.baseurl }}" rel="stylesheet">
+	<link href="{{ '/assets/plugins/owlcarousel2/assets/owl.theme.default.min.css' | prepend: site.baseurl }}" rel="stylesheet">
+	<link href="{{ '/assets/plugins/hover/hover-min.css' | prepend: site.baseurl }}" rel="stylesheet">		
+	
+	<!-- The Project's core CSS file -->
+	<!-- Use css/rtl_style.css for RTL version -->
+	<link href="{{ '/assets/css/style.css' | prepend: site.baseurl }}" rel="stylesheet" >
+	<!-- The Project's Typography CSS file, includes used fonts -->
+	<!-- Used font for body: Roboto -->
+	<!-- Used font for headings: Raleway -->
+	<!-- Use css/rtl_typography-default.css for RTL version -->
+	<link href="{{ '/assets/css/typography-default.css' | prepend: site.baseurl }}" rel="stylesheet" >
+	<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
+	<link href="{{ '/assets/#" data-style="styles" rel="stylesheet">
+	<link href="{{ '/assets/style-switcher/style-switcher.css' | prepend: site.baseurl }}" rel="stylesheet">
+	
+
+	<!-- Custom css --> 
+	<link href="{{ '/assets/css/custom.css' | prepend: site.baseurl }}" rel="stylesheet">
+
+
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 </head>

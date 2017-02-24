@@ -1,0 +1,28 @@
+	
+<div class="row ph-20 pv-20">
+	{% if page.previous.url %}
+		<div class="col-md-6">
+			<div class="feature-box-2 object-non-visible right" data-animation-effect="fadeInDownSmall" data-effect-delay="100">
+				<span class="icon without-bg"><i class="fa fa-arrows"></i></span>
+				<div class="body">
+					<h4 class="title">{{ page.previous.title}}</h4>
+					<p>{{ page.previous.content | strip_html | truncatewords:30 }}<a href="page-services.html">Read More<i class="pl-5 fa fa-angle-double-right"></i></a></p>
+					<div class="separator-3"></div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+
+	{% if page.next.url %}
+		<div class="col-md-6">
+			<div class="feature-box-2 object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="100">
+				<span class="icon without-bg"><i class="icon-snow"></i></span>
+				<div class="body">
+					<h4 class="title">{{ page.next.title}}</h4>
+					<p>{{ page.next.content | strip_html | truncatewords:30 }}<a href="page-services.html">Read More<i class="pl-5 fa fa-angle-double-right"></i></a></p>
+					<div class="separator-2"></div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+</div>
