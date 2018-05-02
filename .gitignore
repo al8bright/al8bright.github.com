@@ -3,3 +3,9 @@ _site
 .jekyll-metadata
 *#
 *~
+
+RuneBFS/web.config
+
+RuneBFS/.idea/*
+RuneBFS/npm-debug.log
+RuneBFS/*.map
